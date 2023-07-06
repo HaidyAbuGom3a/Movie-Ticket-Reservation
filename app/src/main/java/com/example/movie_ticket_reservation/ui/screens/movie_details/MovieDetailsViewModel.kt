@@ -64,7 +64,6 @@ class MovieDetailsViewModel : ViewModel() {
             ActorsUiState(actorImageUrl = "https://nationaltoday.com/wp-content/uploads/2022/10/456840842-min-1200x834.jpg.webp"),
             ActorsUiState(actorImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFJwvrWQtYoX_KqQUXZRs6FNRSaNCqb2-BFjtVxXkfFa1jUpF2z7YJqrj7orOewetYRJA&usqp=CAU"),
             ActorsUiState(actorImageUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYt6I-Pi-But4S9lFulWLRtd42wQhPp0038tQz4g8AbLdijE3qlfi-2---nG8eo1g_ftg&usqp=CAU"),
-            ActorsUiState(actorImageUrl = "https://drive.google.com/file/d/1-UENqiY8z__Eq9aDY-VoudNCPeCgS8hM/view?usp=sharing"),
             ActorsUiState(actorImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Ezra_Miller_by_Gage_Skidmore_2.jpg/800px-Ezra_Miller_by_Gage_Skidmore_2.jpg" ),
             ActorsUiState(actorImageUrl = "https://static.wikia.nocookie.net/the-royals/images/e/eb/PoppyCorby-Tuech.jpg/revision/latest?cb=20150324221521")
         )
