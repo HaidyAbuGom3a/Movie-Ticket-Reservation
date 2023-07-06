@@ -11,27 +11,27 @@ val Typography = Typography(
     titleLarge = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Medium,
-        fontSize = 20.sp,
+        fontSize = 24.sp,
     ),
     titleMedium = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Medium,
-        fontSize = 16.sp,
+        fontSize = 20.sp,
     ),
     titleSmall = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
+        fontSize = 16.sp,
     ),
     bodyLarge = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontSize = 20.sp,
     ),
     bodyMedium = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 16.sp,
     ),
     bodySmall = TextStyle(
         fontFamily = GoogleSans,
@@ -41,20 +41,35 @@ val Typography = Typography(
     labelLarge = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 16.sp,
+        fontSize = 24.sp,
         color = Color.White
     ),
     labelMedium = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 20.sp,
         color = Color.White
     ),
     labelSmall = TextStyle(
         fontFamily = GoogleSans,
         fontWeight = FontWeight.Normal,
-        fontSize = 14.sp,
+        fontSize = 16.sp,
         color = Color.White
+    ),
+    displayLarge = TextStyle(
+        fontFamily = GoogleSans,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp,
+    ),
+    displayMedium = TextStyle(
+        fontFamily = GoogleSans,
+        fontWeight = FontWeight.Normal,
+        fontSize = 16.sp,
+    ),
+    displaySmall = TextStyle(
+        fontFamily = GoogleSans,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp,
     )
 /* Other default text styles to override
 titleLarge = TextStyle(
