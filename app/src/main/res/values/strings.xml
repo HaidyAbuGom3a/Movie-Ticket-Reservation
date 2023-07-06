@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Movie-Ticket-Reservation</string>
+    <string name="movie_image_content_description">Movie Image</string>
+    <string name="rating_from_ten">/10</string>
+    <string name="imdb">IMDb</string>
+    <string name="rotten_tomatoes">Rotten Tomatoes</string>
+    <string name="ign">IGN</string>
+    <string name="actor_image">Actor image</string>
+    <string name="booking">Booking</string>
 </resources>
