@@ -17,7 +17,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.ui_states.MovieDetailsUiState
 
 @Composable
-fun MovieDetailsCard(state: MovieDetailsUiState){
+fun MovieDetailsCard(state: MovieDetailsUiState) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -32,7 +32,10 @@ fun MovieDetailsCard(state: MovieDetailsUiState){
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             MovieDetailsRatings(state)
-            CenteredTwoLineTextIfLong(movieName = state.name)
+            TextMovieTitle(
+                text = state.name,
+                modifier = Modifier.padding(horizontal = 40.dp)
+            )
             MovieGenreLazyRow(genres = state.movieGenre)
             ActorsLazyRow(actors = state.actors)
             MovieTextDescription(description = state.description)
