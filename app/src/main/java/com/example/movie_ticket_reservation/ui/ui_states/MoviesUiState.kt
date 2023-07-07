@@ -7,6 +7,7 @@ data class MoviesUiState(
 data class MovieUiState(
     val name: String = "",
     val imageUrl: String = "",
+    val imageBlur:Int = 0,
     val movieGenre: List<String> = emptyList(),
     val movieTime: String = "",
     val nowShowing: Boolean = false
