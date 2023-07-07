@@ -31,19 +31,6 @@ fun CardMovieTime(time: String) {
             .wrapContentSize(Alignment.Center),
         shape = CircleShape
     ) {
-        Row {
-            Icon(
-                painter = painterResource(id = R.drawable.icon_clock),
-                contentDescription = "",
-                modifier = Modifier.padding(8.dp),
-                tint = Gray100
-            )
-            Text(
-                text = time,
-                style = Typography.displaySmall,
-                modifier = Modifier.padding(top = 8.dp, end = 8.dp)
-            )
-
-        }
+        MovieTime(time = time)
     }
 }
