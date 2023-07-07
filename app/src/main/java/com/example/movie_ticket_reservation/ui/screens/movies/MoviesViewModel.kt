@@ -41,7 +41,7 @@ class MoviesViewModel : ViewModel() {
                 imageUrl = "https://cdn.kinocheck.com/i/mjcd3f6x6m.jpg",
                 imageBlur = R.drawable.image_movie3_blured,
                 nowShowing = true,
-                movieGenre = listOf("Action","Adventure","Fantasy"),
+                movieGenre = listOf("Action", "Adventure", "Fantasy"),
                 movieTime = "2h 6m"
             )
         )
