@@ -46,7 +46,7 @@ fun CardMovieStatus(state: MovieUiState) {
         horizontalArrangement = Arrangement.Center,
         modifier = Modifier
             .fillMaxWidth()
-            .padding(top = 32.dp)
+            .padding(top = 40.dp)
     ) {
         Card(
             colors = cardNowShowingColor,
