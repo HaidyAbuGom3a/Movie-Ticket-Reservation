@@ -12,11 +12,12 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.ui_states.MovieDetailsUiState
 
 @Composable
-fun MovieDetailsRatings(state:MovieDetailsUiState){
+fun MovieDetailsRatings(state: MovieDetailsUiState) {
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(horizontal = 32.dp).padding(top = 32.dp, bottom = 24.dp),
+            .padding(horizontal = 32.dp)
+            .padding(top = 32.dp, bottom = 24.dp),
         horizontalArrangement = Arrangement.SpaceEvenly
     ) {
         ItemRate(state.IMDbRate, stringResource(R.string.imdb), false)

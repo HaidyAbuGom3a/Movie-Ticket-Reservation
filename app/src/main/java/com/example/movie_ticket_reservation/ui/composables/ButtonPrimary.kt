@@ -18,7 +18,7 @@ fun ButtonPrimary(
     onClick: () -> Unit,
     hasIcon: Boolean = false,
     icon: Painter? = null,
-    contentDescription:String = ""
+    contentDescription: String = ""
 ) {
     Button(
         colors = ButtonDefaults.buttonColors(containerColor = Primary),

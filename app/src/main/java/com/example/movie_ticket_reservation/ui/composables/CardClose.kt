@@ -16,7 +16,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.theme.ColorTransparent
 
 @Composable
-fun CardClose(){
+fun CardClose() {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = ColorTransparent,

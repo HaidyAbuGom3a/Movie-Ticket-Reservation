@@ -8,7 +8,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun MovieGenreLazyRow(genres:List<String>){
+fun MovieGenreLazyRow(genres: List<String>) {
     LazyRow(
         contentPadding = PaddingValues(horizontal = 32.dp),
         horizontalArrangement = Arrangement.spacedBy(4.dp)

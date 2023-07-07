@@ -16,7 +16,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.theme.Primary
 
 @Composable
-fun CardPlay(){
+fun CardPlay() {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = Primary, contentColor = Color.White
