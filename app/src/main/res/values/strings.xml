@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">Movie-Ticket-Reservation</string>
+    <string name="movie_image_content_description">Movie Image</string>
+    <string name="rating_from_ten">/10</string>
+    <string name="imdb">IMDb</string>
+    <string name="rotten_tomatoes">Rotten Tomatoes</string>
+    <string name="ign">IGN</string>
+    <string name="actor_image">Actor image</string>
+    <string name="booking">Booking</string>
+    <string name="now_showing">Now Showing</string>
+    <string name="coming_soon">Coming Soon</string>
+    <string name="tickets">" tickets"</string>
+    <string name="dollar">$</string>
+    <string name="buy_tickets">Buy tickets</string>
+    <string name="available">Available</string>
+    <string name="taken">Taken</string>
+    <string name="selected">Selected</string>
+    <string name="cinema_screen">Cinema Screen</string>
 </resources>
