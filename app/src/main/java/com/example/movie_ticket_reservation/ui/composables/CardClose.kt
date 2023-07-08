@@ -23,7 +23,7 @@ fun CardClose() {
             contentColor = Color.White
         ),
         modifier = Modifier
-            .padding(horizontal = 16.dp, vertical = 24.dp)
+            .padding(start = 16.dp, top = 24.dp)
             .wrapContentSize(Alignment.Center),
         shape = CircleShape
     ) {
