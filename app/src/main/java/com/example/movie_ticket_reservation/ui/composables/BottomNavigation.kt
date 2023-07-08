@@ -24,7 +24,7 @@ fun BottomNavigation(
         ItemBottomNav(
             isSelected = true,
             icon = icon1,
-            modifier = Modifier.padding(start = 24.dp)
+            modifier = Modifier.padding(start = 16.dp)
         )
         ItemBottomNav(
             isSelected = false,
@@ -39,7 +39,7 @@ fun BottomNavigation(
         ItemBottomNav(
             isSelected = false,
             icon = icon4,
-            modifier = Modifier.padding(end = 24.dp)
+            modifier = Modifier.padding(end = 16.dp)
         )
 
     }
