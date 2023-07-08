@@ -1,5 +1,6 @@
 package com.example.movie_ticket_reservation.ui.composables
 
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
@@ -18,11 +19,15 @@ fun ButtonPrimary(
     onClick: () -> Unit,
     hasIcon: Boolean = false,
     icon: Painter? = null,
-    contentDescription: String = ""
+    contentDescription: String = "",
+    modifier: Modifier = Modifier,
+    contentPadding: PaddingValues = PaddingValues(0.dp)
 ) {
     Button(
         colors = ButtonDefaults.buttonColors(containerColor = Primary),
-        onClick = onClick
+        onClick = onClick,
+        modifier = modifier,
+        contentPadding = contentPadding
     ) {
         if (hasIcon && icon != null) {
             Icon(

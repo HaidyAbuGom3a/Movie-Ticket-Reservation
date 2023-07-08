@@ -2,6 +2,7 @@ package com.example.movie_ticket_reservation.ui.composables
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -43,7 +44,8 @@ fun MovieDetailsCard(state: MovieDetailsUiState) {
                 text = stringResource(R.string.booking),
                 onClick = { },
                 hasIcon = true,
-                icon = painterResource(id = R.drawable.icon_booking)
+                icon = painterResource(id = R.drawable.icon_booking),
+                contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
             )
             SpacerVertical24()
         }
