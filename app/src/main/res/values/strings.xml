@@ -16,4 +16,5 @@
     <string name="taken">Taken</string>
     <string name="selected">Selected</string>
     <string name="cinema_screen">Cinema Screen</string>
+    <string name="done_successfully">Done Successfully</string>
 </resources>

@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.composables.BluredImage
 import com.example.movie_ticket_reservation.ui.composables.BottomNavigation
@@ -25,20 +26,23 @@ import com.example.movie_ticket_reservation.ui.composables.MoviesPager
 import com.example.movie_ticket_reservation.ui.composables.SpacerVertical24
 import com.example.movie_ticket_reservation.ui.composables.SpacerVertical32
 import com.example.movie_ticket_reservation.ui.composables.TextMovieTitle
+import com.example.movie_ticket_reservation.ui.screens.movie_details.navigateToMovieDetails
 import com.example.movie_ticket_reservation.ui.ui_states.MoviesUiState
 
 @Composable
 fun MoviesScreen(
+    navController: NavController,
     viewModel: MoviesViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
-    MoviesContent(state)
+    MoviesContent(state) { navController.navigateToMovieDetails() }
 }
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun MoviesContent(
-    state: MoviesUiState
+    state: MoviesUiState,
+    onClickMovie: () -> Unit
 ) {
     Box {
         val pagerState = rememberPagerState(initialPage = 1) { state.movies.size }
@@ -48,7 +52,7 @@ fun MoviesContent(
         ) {
             CardMovieStatus(state = state.movies[pagerState.currentPage])
             SpacerVertical32()
-            MoviesPager(pagerState = pagerState, state = state)
+            MoviesPager(pagerState = pagerState, state = state, onClickMovie)
             SpacerVertical24()
             MovieTime(time = state.movies[pagerState.currentPage].movieTime)
             SpacerVertical24()
@@ -78,5 +82,5 @@ fun MoviesContent(
 fun previewMoviesScreen() {
     val viewModel: MoviesViewModel = hiltViewModel()
     val state by viewModel.state.collectAsState()
-    MoviesContent(state = state)
+    MoviesContent(state = state) {}
 }

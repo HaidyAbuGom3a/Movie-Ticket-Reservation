@@ -27,7 +27,8 @@ import com.example.movie_ticket_reservation.ui.ui_states.TimeUiState
 fun CardBookingDetails(
     state: BookingUiState,
     onClickTimeItem: (TimeUiState) -> Unit,
-    onClickDayItem: (DayUiState) -> Unit
+    onClickDayItem: (DayUiState) -> Unit,
+    onClickBuyTickets: () -> Unit
 ) {
     Card(
         modifier = Modifier
@@ -61,7 +62,7 @@ fun CardBookingDetails(
                 Spacer(modifier = Modifier.weight(1f))
                 ButtonPrimary(
                     text = stringResource(R.string.buy_tickets),
-                    onClick = { },
+                    onClick = { onClickBuyTickets() },
                     hasIcon = true,
                     icon = painterResource(id = R.drawable.icon_booking),
                     contentPadding = PaddingValues(horizontal = 24.dp, vertical = 8.dp),

@@ -2,6 +2,7 @@ package com.example.movie_ticket_reservation.ui.composables
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.aspectRatio
 import androidx.compose.foundation.layout.fillMaxSize
@@ -23,7 +24,12 @@ import kotlin.math.absoluteValue
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun MoviesPager(pagerState: PagerState, state: MoviesUiState, imageHeight: Dp = 350.dp) {
+fun MoviesPager(
+    pagerState: PagerState,
+    state: MoviesUiState,
+    onClickMovie: () -> Unit,
+    imageHeight: Dp = 350.dp
+) {
     HorizontalPager(
         state = pagerState,
         contentPadding = PaddingValues(horizontal = 65.dp),
@@ -43,7 +49,8 @@ fun MoviesPager(pagerState: PagerState, state: MoviesUiState, imageHeight: Dp = 
                     scaleY = lerp(
                         start = 0.8f, stop = 1f, fraction = 1f - pageOffset.coerceIn(0f, 1f)
                     )
-                }, elevation = CardDefaults.cardElevation(0.dp)
+                }
+                .clickable { onClickMovie() }, elevation = CardDefaults.cardElevation(0.dp)
         ) {
             Image(
                 modifier = Modifier.fillMaxSize(),

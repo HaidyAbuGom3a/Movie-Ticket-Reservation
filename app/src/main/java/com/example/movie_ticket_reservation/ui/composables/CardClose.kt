@@ -1,5 +1,6 @@
 package com.example.movie_ticket_reservation.ui.composables
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.foundation.shape.CircleShape
@@ -16,7 +17,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.theme.ColorTransparent
 
 @Composable
-fun CardClose() {
+fun CardClose(onClick: () -> Unit) {
     Card(
         colors = CardDefaults.cardColors(
             containerColor = ColorTransparent,
@@ -24,7 +25,8 @@ fun CardClose() {
         ),
         modifier = Modifier
             .padding(start = 16.dp, top = 24.dp)
-            .wrapContentSize(Alignment.Center),
+            .wrapContentSize(Alignment.Center)
+            .clickable { onClick() },
         shape = CircleShape
     ) {
         Icon(

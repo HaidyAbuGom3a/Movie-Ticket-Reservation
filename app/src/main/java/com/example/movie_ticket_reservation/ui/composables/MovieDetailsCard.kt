@@ -18,7 +18,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.ui_states.MovieDetailsUiState
 
 @Composable
-fun MovieDetailsCard(state: MovieDetailsUiState) {
+fun MovieDetailsCard(state: MovieDetailsUiState, onClickBooking: () -> Unit) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -42,7 +42,7 @@ fun MovieDetailsCard(state: MovieDetailsUiState) {
             MovieTextDescription(description = state.description)
             ButtonPrimary(
                 text = stringResource(R.string.booking),
-                onClick = { },
+                onClick = { onClickBooking() },
                 hasIcon = true,
                 icon = painterResource(id = R.drawable.icon_booking),
                 contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)

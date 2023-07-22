@@ -20,7 +20,7 @@ import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.ui_states.MovieDetailsUiState
 
 @Composable
-fun ItemVideo(state: MovieDetailsUiState) {
+fun ItemVideo(state: MovieDetailsUiState, onClickClose: () -> Unit) {
     Box {
         Image(
             painter = rememberAsyncImagePainter(
@@ -35,7 +35,7 @@ fun ItemVideo(state: MovieDetailsUiState) {
             contentScale = ContentScale.FillWidth
         )
         Row {
-            CardClose()
+            CardClose(onClickClose)
             Spacer(Modifier.weight(1f))
             CardMovieTime(time = state.movieTime)
         }

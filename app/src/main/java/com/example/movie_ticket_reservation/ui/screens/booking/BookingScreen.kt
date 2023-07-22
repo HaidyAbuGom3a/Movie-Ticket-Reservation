@@ -1,5 +1,6 @@
 package com.example.movie_ticket_reservation.ui.screens.booking
 
+import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -13,11 +14,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.RectangleShape
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.navigation.NavController
 import com.example.movie_ticket_reservation.R
 import com.example.movie_ticket_reservation.ui.composables.CardBookingDetails
 import com.example.movie_ticket_reservation.ui.composables.CardClose
@@ -29,15 +31,19 @@ import com.example.movie_ticket_reservation.ui.ui_states.TimeUiState
 
 @Composable
 fun BookingScreen(
+    navController: NavController,
     viewModel: BookingViewModel = hiltViewModel()
 ) {
     val state by viewModel.state.collectAsState()
+    val message = stringResource(R.string.done_successfully)
+    val context = LocalContext.current
     BookingContent(
         state,
         viewModel::onClickSeat,
         viewModel::onClickDayItem,
-        viewModel::onClickTimeItem
-    )
+        viewModel::onClickTimeItem,
+        { navController.navigateUp() }
+    ) { Toast.makeText(context, message, Toast.LENGTH_SHORT).show() }
 }
 
 
@@ -46,7 +52,9 @@ fun BookingContent(
     state: BookingUiState,
     onClickSeat: (Boolean, Int) -> Unit,
     onClickDayItem: (DayUiState) -> Unit,
-    onClickTimeItem: (TimeUiState) -> Unit
+    onClickTimeItem: (TimeUiState) -> Unit,
+    onClickBackButton: () -> Unit,
+    onClickBuyTickets: () -> Unit
 ) {
     Box {
         Card(
@@ -57,7 +65,7 @@ fun BookingContent(
             shape = RectangleShape
         ) {
             Column {
-                CardClose()
+                CardClose(onClickBackButton)
                 Image(
                     painter = painterResource(R.drawable.image_cinema),
                     contentDescription = stringResource(R.string.cinema_screen),
@@ -72,16 +80,17 @@ fun BookingContent(
         CardBookingDetails(
             state = state,
             onClickTimeItem = onClickTimeItem,
-            onClickDayItem = onClickDayItem
+            onClickDayItem = onClickDayItem,
+            onClickBuyTickets = onClickBuyTickets
         )
 
     }
 }
 
 
-@Composable
-@Preview(showSystemUi = true)
-fun previewBookingScreen() {
-    val viewModel: BookingViewModel = hiltViewModel()
-    BookingScreen(viewModel)
-}
+//@Composable
+//@Preview(showSystemUi = true)
+//fun previewBookingScreen() {
+//    val viewModel: BookingViewModel = hiltViewModel()
+//    BookingScreen(viewModel)
+//}

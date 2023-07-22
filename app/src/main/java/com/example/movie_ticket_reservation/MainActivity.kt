@@ -1,18 +1,23 @@
 package com.example.movie_ticket_reservation
 
-import TransparentStatusBar
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.example.movie_ticket_reservation.ui.screens.movies.MoviesScreen
+import androidx.compose.ui.graphics.Color
+import androidx.navigation.compose.rememberNavController
+import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        //WindowCompat.setDecorFitsSystemWindows(window, false)
+        //WindowCompat.setDecorFitsSystemWindows(window, true)
         setContent {
-            TransparentStatusBar()
-            MoviesScreen()
+            val systemUiController = rememberSystemUiController()
+            systemUiController.setStatusBarColor(Color.White, darkIcons = true)
+            val navController = rememberNavController()
+            MovieTicketsNavGraph(navController = navController)
         }
     }
 }
